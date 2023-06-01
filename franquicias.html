@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Franquicias</title>
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="responsive.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="cabecera">
+		<section class="top-nav">
+	    <a id="logo" title="Inicio" href="index.html"><img src="./images/logopizza.png"></a>
+	    <h1 class="titulo">PIZZA CONMIGO</h1>
+	    <input id="menu-toggle" type="checkbox" />
+	    <label class='menu-button-container' for="menu-toggle">
+	    <div class='menu-button'></div>
+	  	</label>
+	    <ul class="menu">
+	      <li><a href="#espacio">EL ESPACIO</a></li>
+		  <li><a href="#productos">SERVICIOS</a></li>
+		  <li><a href="#reserva">RESERVAS</a></li>
+	    </ul>
+	  </section>
+	</div>	
+	<div class="contenedor"></div>
+	<br/>
+	<div class="inner contact">
+		<div class="contact-form">
+		    <form id="contact-us" method="post" action="#">
+		        <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
+		            <input type="text" name="name" id="name" required="required" class="form" placeholder="Nombre y apellidos" />
+		            <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
+		            <input type="text" name="telefono" id="telefono" required="required" class="form" placeholder="Teléfono" />
+		        </div>
+		        <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
+		            <textarea name="message" id="message" class="form textarea"  placeholder="Mensaje"></textarea>
+		        </div>
+		        <div class="relative fullwidth col-xs-12">
+		            <button type="submit" id="submit" name="submit" class="form-btn semibold">Enviar</button> 
+		        </div>
+		        <div class="clear"></div>
+		    </form>
+		    <div class="mail-message-area">
+		        <div class="alert gray-bg mail-message not-visible-message">
+		            <strong>Gracias!</strong> Tu registro ha sido guardado.
+		        </div>
+		    </div>
+
+		</div>
+		</div>
+
+		<script defer src="franquicia.js"></script>
+</body>
+</html>

@@ -6,14 +6,14 @@
 	<title>Pizza conmigo</title>
 	<link rel="stylesheet" href="index.css">
 	<link rel="stylesheet" href="responsive.css">
-	<link rel="shortcut icon" href="cake.ico">
+	<link rel="shortcut icon" href="cake.ico">	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 </head>
 <body>
 	<div class="cabecera">
 		<section class="top-nav">
-	    <div>
-	      <img id="logo" src="./images/logopizza.png">
-	    </div>
+	      <a id="logo" title="Inicio" href="index.html"><img src="./images/logopizza.png"></a>
+	      <h1 class="titulo">PIZZA CONMIGO</h1>
 	    <input id="menu-toggle" type="checkbox" />
 	    <label class='menu-button-container' for="menu-toggle">
 	    <div class='menu-button'></div>
@@ -22,14 +22,122 @@
 	      <li><a href="#espacio">EL ESPACIO</a></li>
 		  <li><a href="#productos">SERVICIOS</a></li>
 		  <li><a href="#reserva">RESERVAS</a></li>
-		  <li><a href="#contacto">CONTACTO</a></li>
 	    </ul>
 	  </section>
 	</div>
-	<div class="contenedor">
+	<div class="contenedor"  style="border-radius: 20px;">
 		<h1>¡Deliciosa Pizza y Más en<br> Pizza Conmigo!</h1>
 		<p>Pizza Conmigo es un restaurante Argentino que sirve deliciosas pizzas recién hechas y más. Nuestro menú incluye una variedad de pizzas especiales, así como ensaladas, sándwiches y platos de pasta. ¡Ven a probar nuestras recetas únicas y deliciosas para saborear Argentina!</p>
 	</div>
-</div>
+	
+
+	<div class="contentSlider">
+		<div class="sliderDiv">
+			<h1 style="color: white;">Nuestras Pizzas</h1>
+			<section id="container-slider">	
+			   <a href="javascript: fntExecuteSlide('prev');" class="arrowPrev"><i class="fas fa-chevron-circle-left"></i></a>
+			   <a href="javascript: fntExecuteSlide('next');" class="arrowNext"><i class="fas fa-chevron-circle-right"></i></a>
+			   <ul class="listslider">
+			     <li><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
+			     <li><a itlist="itList_1" href="#"></a></li>
+			     <li><a itlist="itList_2" href="#"></a></li>
+			     <li><a itlist="itList_3" href="#"></a></li>
+				 <li><a itlist="itList_4" href="#"></a></li>
+				 <li><a itlist="itList_5" href="#"></a></li>
+			   </ul>
+			   <ul id="slider">
+			     <li style="background-image: url('./images/moderna.png'); z-index:0; opacity: 1;border-radius: 20px;">
+			       <div class="content_slider" >
+						<h1>MODERNA</h1>
+						<p>Salsa, muzza, rúcula, jamón crudo, tomates deshidratados, parmesano</p>
+			       </div>
+			     </li>
+			     <li style="background-image: url('./images/especial.png');border-radius: 20px; ">
+			       <div class="content_slider" >
+						<h1>ESPECIAL DE CEBOLLA</h1>						
+						<p>Salsa, muzzarella, cebolla cortada en pluma, tomates cherrys confitados, aceitunas negraS</p>
+			       </div>
+			     </li>
+			     <li style="background-image: url('./images/inferno.png');border-radius: 20px; ">
+			       <div class="content_slider" >
+						<h1>INFERNO					
+						<p>Salsa, muzza, panceta feteada, jalapeños verdes en rodajas, salsa de jalapeño rojo, cebolla morada, provolone rallado y hojas de albahaca</h1></p>
+			       </div>
+			     </li>
+			     <li style="background-image: url('./images/alemana.png');border-radius: 20px; ">
+			       <div class="content_slider" >
+						<h1>ALEMANA</h1>
+						<p>Salsa, muzza, cebolla caramelizada, salchicha parrillera y mostaza</p>
+			       </div>
+			     </li>
+				 <li style="background-image: url('./images/peperoni.png');border-radius: 20px; ">
+					<div class="content_slider" >
+						<h1>FUGAZZETTA DE PEPPERONI</h1>
+						<p>Salsa, muzza, cebolla, peperoni</p>
+					</div>
+				</li>
+				<li style="background-image: url('./images/vegetariana.png');border-radius: 20px; ">
+					<div class="content_slider" >
+						<h1>VEGETARIANA</h1>
+						<p>Salsa, muzza, zucchini, asado, berenjena asada, tomates cherrys confitados, aceitunas negras, y hojas de albahaca</p>
+					</div>
+				</li>
+			  </ul>
+			</section>
+		</div>			
+		<div class="textoSlider" style="border-radius: 20px;">
+			<h1 class="h1Center">Pizzeando desde 1988</h1>
+			<h3>Pizza...picsa, pixa o pitsa, según quien lo pronuncie. Nos encanta que la coman de parados en el mostrador, en la mesa con la familia o en la terraza con amigos. Con la mano o con cubiertos. Amamos que entren por el olorcito o porque vinieron después de la UAX. Que se animen a comer la fainá (o fáina, como prefieran) fría o caliente; arriba o abajo de la muzza. Que se la lleven para desayunar al día siguiente. Amamos que la pizza sea parte de nuestras vidas. Tanto la amamos, que desde 1988 estamos abiertos desde la mañana hasta la madrugada, porque no hay hora para comer una buena pizza. Una pizza hecha con amor, nuestra pizza, pizzaconmigo...</h3>
+		</div>
+	</div>
+	<div class="contentContacto">
+		<div class="contacto" style="border-radius: 20px;">
+			<h1>Contactanos</h1>
+			<div class="inner contact">
+				<div class="contact-form">
+					<form id="contact-us" method="post" action="#">
+						<div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
+							<input type="text" name="name" id="name" required="required" class="form" placeholder="Nombre y apellidos" />
+							<input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
+							<input type="text" name="telefono" id="telefono" required="required" class="form" placeholder="Teléfono" />
+						</div>
+						<div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
+							<textarea name="message" id="message" class="form textarea"  placeholder="Mensaje"></textarea>
+						</div>
+						<div class="relative fullwidth col-xs-12">
+							<button type="submit" id="submit" name="submit" class="form-btn semibold">Enviar</button> 
+						</div>
+						<div class="clear"></div>
+					</form>
+					<div class="mail-message-area">
+						<div class="alert gray-bg mail-message not-visible-message">
+							<strong>Gracias!</strong> Tu registro ha sido guardado.
+						</div>
+					</div>
+		
+				</div>
+				</div>
+		
+		</div>
+		<div class="mapa">
+			<h1>Donde encontrarnos</h1>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1273.169827594163!2d-3.9632487302946933!3d40.49134901812981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDDCsDI5JzI4LjkiTiAzwrA1Nyc0NS40Ilc!5e1!3m2!1ses!2ses!4v1685635042146!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+	</div>
+	<div class="redes">
+		<h1>Nuestas redes</h1>
+		<pre></pre>
+		<a id="facebook" title="Facebook" href="#"><img src="./images/ico-facebook.svg"></a>
+		<pre></pre>
+		<a id="instagram" title="Instagram" href="#"><img src="./images/ico-instagram.svg"></a>
+		<pre></pre>
+		<a id="youtube" title="Youtube" href="#"><img src="./images/ico-youtube.svg"></a>
+	</div>
+	<div class="Franquicias">
+		<h1>Franquicias</h1>
+		<a title="Sumate" href="Franquicias.html"><img src="images/sumate.svg" alt="Sumate" /></a>
+	</div>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<script defer src="functions.js"></script>
 </body>
 </html>

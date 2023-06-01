@@ -47,7 +47,7 @@
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1400px) {
 
 	.contenedor > h1 {
   font-size: 75px;
@@ -62,5 +62,27 @@
   margin-right: 0;
 }
 
+.contentSlider{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sliderDiv{
+  width: 100%;
+}
+.textoSlider{
+  width: 100%;
+}
+.contentContacto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contacto {
+  width: 100%;
+}
+.mapa{
+  width: 100%;
+}
 
 }
