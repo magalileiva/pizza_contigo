@@ -123,13 +123,13 @@ p {
   height: 800px;
 }
 .contenedor > h1 {
-  font-size: 100px;
+  font-size: 90px;
   font-family: fontBold;
   margin-left: 400px;
   margin-right: 400px;
 }
 .contenedor > p {
-  font-size: xx-large;
+  font-size: x-large;
   font-family: fontRegular;
   margin-left: 250px;
   margin-right: 250px;
@@ -156,7 +156,7 @@ p {
 }
 .contacto {
   width: 50%;
-  background-color: #93685f !important;
+  /*background-color: #93685f !important;*/
   text-align: center;
 }
 .contacto h1 {
@@ -176,7 +176,7 @@ p {
 }
 .textoSlider{
   width: 50%;
-  background-color: #93685f !important;
+  /*background-color: #93685f !important;*/
   padding: 0 0 2% 2%;
 }
 
@@ -499,4 +499,13 @@ input {
 .redes pre{
   background-color: #000;
   border-color: #000;
+}
+.contenedorMenu {
+  display: flex;
+  align-items: center;
+}
+.carta {
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom;
 }
