@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Franquicias</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0,width=device-width">
+	<title>Pizza conmigo</title>
 	<link rel="stylesheet" href="index.css">
 	<link rel="stylesheet" href="responsive.css">
+	<link rel="shortcut icon" href="cake.ico">	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 </head>
-<body>
+<body>	
 	<div class="cabecera">
 		<section class="top-nav">
-	      <a id="logo" title="Inicio" href="index.html"><img src="./images/logopizza.png"></a>
+	      <a id="logo" title="Inicio" href="index.html"><img src="images/logopizza.png"></a>
 	      <h1 class="titulo">PIZZA CONMIGO</h1>
 	    <input id="menu-toggle" type="checkbox" />
 	    <label class='menu-button-container' for="menu-toggle">
@@ -24,24 +25,43 @@
 	    </ul>
 	  </section>
 	</div>
-	<div class="contenedor"></div>
-	<br/>
+	<div class="contenedor contenedorReservas">
+		<h1>RESERVAS</h1>	
+	</div>
+    <br/>
 	<div class="inner contact">
 		<div class="contact-form">
 		    <form id="contact-us" method="post" action="#">
 		        <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
+		            <input type="date" name="fecha" id="fecha" required="required" class="form" placeholder="Fecha" onclick="minMaxDate();"/>
+                    <script>
+                        function minMaxDate() {
+							today = new Date()
+							maxLimit  = new Date();
+							maxLimit.setDate(today.getDate()+14);
+                            document.getElementById("fecha").min = today.toISOString().split("T")[0];            
+                            document.getElementById("fecha").max = maxLimit.toISOString().split("T")[0];   
+                        }
+                    </script>
+                    <input type="time" name="hora" id="hora" required="required" list="avail" class="form" placeholder="hora">
+					<datalist id="avail">
+						<option value="13:30">
+						<option value="14:00">
+						<option value="14:30">
+						<option value="15:00">
+						<option value="15:30">
+						<option value="20:30">
+						<option value="21:00">
+						<option value="21:30">
+						<option value="22:00">
+						<option value="22:30">
+					</datalist>
+                    <input type="number" name="comensales" id="comensales" required="required" max="10" class="form" placeholder="comensales" />
+		        </div>
+		        <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
 		            <input type="text" name="name" id="name" required="required" class="form" placeholder="Nombre" />
 		            <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
 		            <input type="text" name="telefono" id="telefono" required="required" class="form" placeholder="Teléfono" />
-					<select name="capital" id="capital"  required="required"  class="form">
-						<option value="" disabled selected hidden>Capital para aportar</option>
-						<option value="1">Hasta 10000€</option>
-						<option value="2">10000€-20000€</option>
-						<option value="3">&gt;20000€</option>
-					</select>
-		        </div>
-		        <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
-		            <textarea name="message" id="message" class="form textarea"  placeholder="Mensaje"></textarea>
 		        </div>
 		        <div class="relative fullwidth col-xs-12">
 		            <button type="submit" id="submit" name="submit" class="form-btn semibold">Enviar</button> 
@@ -55,8 +75,5 @@
 		    </div>
 
 		</div>
-		</div>
-
-		<script defer src="franquicia.js"></script>
+		</div>        
 </body>
-</html>
