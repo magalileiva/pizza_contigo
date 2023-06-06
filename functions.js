@@ -48,3 +48,34 @@ function fntExecuteSlide(side){
     elements[nextElement].style.opacity=1;
     elements[nextElement].style.zIndex =1;
 }
+
+
+var contactos = [];
+
+function processForm(e) {
+    if (localStorage.getItem("contactos")) {
+        contactos = JSON.parse(localStorage.getItem("contactos"));
+    }else{
+        var contactos = [];
+    }
+
+    const nombre = e.currentTarget[0].value;
+    const email = e.currentTarget[1].value;
+    const telefono = e.currentTarget[2].value;
+    const mensajeTexto = e.currentTarget[3].value;
+    const mensaje = new Object();
+    mensaje.nombre = nombre;
+    mensaje.email = email;
+    mensaje.telefono = telefono;
+    mensaje.mensaje = mensajeTexto;
+    contactos.push(mensaje);
+
+    localStorage.setItem("contactos", JSON.stringify(contactos));
+}
+
+var form = document.getElementById('contact-us');
+if (form.attachEvent) {
+    form.attachEvent("submit", processForm);
+} else {
+    form.addEventListener("submit", processForm);
+}

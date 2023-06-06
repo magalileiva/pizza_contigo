@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0,width=device-width">
+	<title>Pizza conmigo</title>
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="responsive.css">
+	<link rel="shortcut icon" href="cake.ico">	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+</head>
+<body>  
+	<div class="cabecera">
+		<section class="top-nav">
+	      <a id="logo" title="Inicio" href="index.html"><img src="images/logopizza.png"></a>
+	      <h1 class="titulo">PIZZA CONMIGO</h1>
+	    <input id="menu-toggle" type="checkbox" />
+	    <label class='menu-button-container' for="menu-toggle">
+	    <div class='menu-button'></div>
+	  	</label>
+	    <ul class="menu">
+	      <li><a href="espacio.html">EL ESPACIO</a></li>
+		  <li><a href="menu.html">MENU</a></li>
+		  <li><a href="reservas.html">RESERVAS</a></li>
+	    </ul>
+	  </section>
+	</div>
+  <br>
+
+  <div id="divLogin">
+    <div class="col-xs-12 wow animated slideInLeft" data-wow-delay=".5s">		        
+        <input type="text" name="password" id="password" required="required" class="form" placeholder="Password" />
+    </div>
+    <div class="relative fullwidth col-xs-12">
+        <button id="enviar" type="button" class="form-btn semibold" onclick="onPassword();">Enviar</button> 
+    </div>
+  </div>
+    
+  <div id="contenido" class="contenido">
+    <div class="tablePrivado">
+        <h1>Reservas</h1>
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">nombre</th>
+                <th scope="col">email</th>
+                <th scope="col">telefono</th>
+                <th scope="col">dia</th>
+                <th scope="col">hora</th>
+                <th scope="col">comensales</th>
+              </tr>
+            </thead>
+            <tbody>
+              <script>
+                  if (localStorage.getItem("reservas")) {
+                      mensajesReservas = JSON.parse(localStorage.getItem("reservas"));
+                      for (var i = 0; i <mensajesReservas.length; i++) {
+                        document.write("<tr>"+
+                                      "<td>" + mensajesReservas[i].nombre + "</td>"+
+                                      "<td>"+ mensajesReservas[i].email + "</td>"+
+                                      "<td>"+ mensajesReservas[i].telefono + "</td>"+
+                                      "<td>"+ mensajesReservas[i].dia + "</td>"+
+                                      "<td>"+ mensajesReservas[i].hora + "</td>"+
+                                      "<td>"+ mensajesReservas[i].comensales + "</td>"+
+                                      "</tr>"); 
+                      }
+                  }                  
+            </script>
+            </tbody>
+          </table>
+    </div>
+    <div class="tablePrivado">
+        <h1>Franquicias</h1>
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">nombre</th>
+                <th scope="col">email</th>
+                <th scope="col">nombre</th>
+                <th scope="col">capital</th>
+                <th scope="col">mensaje</th>
+              </tr>
+            </thead>
+            <tbody>
+              <script>
+                if (localStorage.getItem("franquicias")) {
+                    mensajes = JSON.parse(localStorage.getItem("franquicias"));
+                    for (var i = 0; i <mensajes.length; i++) {
+                      document.write("<tr>"+
+                                    "<td>" + mensajes[i].nombre + "</td>"+
+                                    "<td>"+ mensajes[i].email + "</td>"+
+                                    "<td>"+ mensajes[i].telefono + "</td>"+
+                                    "<td>"+ mensajes[i].capital + "</td>"+
+                                    "<td>"+ mensajes[i].mensaje + "</td>"+
+                                    "</tr>"); 
+                    }
+                }                  
+          </script>
+          </table>
+    </div>
+    <div class="tablePrivado">
+        <h1>Contactos</h1>
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">nombre</th>
+                <th scope="col">email</th>
+                <th scope="col">nombre</th>
+                <th scope="col">mensaje</th>
+              </tr>
+            </thead>
+            <tbody>
+              <script>
+                if (localStorage.getItem("contactos")) {
+                    mensajes = JSON.parse(localStorage.getItem("contactos"));
+                    for (var i = 0; i <mensajes.length; i++) {
+                      document.write("<tr>"+
+                                    "<td>" + mensajes[i].nombre + "</td>"+
+                                    "<td>"+ mensajes[i].email + "</td>"+
+                                    "<td>"+ mensajes[i].telefono + "</td>"+
+                                    "<td>"+ mensajes[i].mensaje + "</td>"+
+                                    "</tr>"); 
+                    }
+                }                  
+          </script>
+            </tbody>
+          </table>
+    </div>
+  </div>
+  <script defer src="privado.js"></script>
+  </body>

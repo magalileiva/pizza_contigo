@@ -243,7 +243,7 @@ p {
 }
 #container-slider .arrowNext {
     left: initial;
-    right: 11%; !important;
+    right: 11% !important;
 }
 .content_slider{
     padding: 15px 30px;
@@ -610,4 +610,22 @@ input {
 .pieReservas a:link, a:visited {
   text-decoration: none;
   color: white;
+}
+
+table {
+  color: white;
+}
+
+.tablePrivado {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.tablePrivado h1 {
+  color: white;
+}
+.contenido {
+  width: 100%;
+  display: none;
 }
