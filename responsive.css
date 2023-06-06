@@ -8,6 +8,12 @@
   .contenedorMenu p {
     font-size: 20px !important;
   }
+    table thead th {
+     color: white; font-size:7px !important; 
+  }
+  tbody td {
+    color: white; font-size:7px !important; 
+ }
 }
 @media (max-width: 1000px) {
   .contenedor {
